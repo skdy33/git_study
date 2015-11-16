@@ -1,0 +1,54 @@
+전역변수 이름, 이메일 설정
+git config --global user.name 
+git config --global user.email
+
+Q. 이 설정은 왜 하는거지? id는 아닌거 같은데?
+Q. 이 설정은 매번 해야하나??? 
+
+Q. merge에 대한 개념이 확실하지 않아.
+
+Q. groupadd/useradd가 되지 않아
+
+Q.  It initializes the repository without a working directory.
+이게 무슨 뜻이지.
+
+git clone
+git checkout
+git log --stat
+git commit
+
+git tab completion
+https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+git using at prompt
+https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
+
+bash-custom-prompt
+http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+
+ - move file to somewhere with certain name
+mv Desktop/git-completion.bash.txt git-completion.bash
+
+ - configuring core editor
+git config --global core.editor "C:/Program\ Files\ (x86)/Sublime\ Text\ 3/'sublime_text.exe' -n -w"
+-n은 윈도우에 new키겠다는 의미이고
+-w는 sublime을 끄기 전까지 wait 하겠다는 의미
+
+ - 숨겨진 파일 열기
+. 를 mv command 로 일단 지워주고 다시 설정	
+
+ - 이건 일단 모르겠어 뭔지
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
+
+Q diff -u 에서 -u의 의미가 무엇인가.
+diff -u file.txt updated.txt
+
+ - 파일 보기
+ls
+ls -a (숨겨진 파일까지 보기)
+
+ - git status
+last commit 에서 무슨 파일이 바뀌었는지 알 수 있다.
+
+ - branch가 무엇인지 이해해야 한다.
