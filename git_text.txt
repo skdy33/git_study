@@ -30,7 +30,16 @@ http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
 mv Desktop/git-completion.bash.txt git-completion.bash
 
  - configuring core editor
-git config --global core.editor "C:/Program\ Files\ (x86)/Sublime\ Text\ 3/'sublime_text.exe' -n -w"
+git config --global core.editor "C:/Program\ Files\ \(x86\)/Sublime\ Text\ 3/'sublime_text.exe' -n -w"
+
+ - branch (git branch)
+수정을 multiple version으로 할 수도 있기 때문에 존재한다.
+구분을 위해 label을 달 수 있는 것이다.
+master is a main branch
+(git checkout "branch-name")
+
+ - merging
+merging branches with the main(master) or sth else
 -n은 윈도우에 new키겠다는 의미이고
 -w는 sublime을 끄기 전까지 wait 하겠다는 의미
 
@@ -52,3 +61,48 @@ ls -a (숨겨진 파일까지 보기)
 last commit 에서 무슨 파일이 바뀌었는지 알 수 있다.
 
  - branch가 무엇인지 이해해야 한다.
+
+ - git add
+정확히 어떠한 파일들이 변했는지를 확정하고 저장하기 위해서 add를 해주고 그 add를 commit 하는 거야. 즉, working directory에서 staging area로 수정된 파일들을 보내고, repository에서 확정하는 것이지.
+
+
+ - git commit -m "Commit message"
+
+ - git diff with no variables
+working  directory 와 staging area의 비교. 즉, 방금 바꾼거를 볼 수 있는거야.
+
+ - 그렇다면 staging area와 most recent commit의 비교는 어떻게 할 수 있나?
+git diff --staged	
+
+ - git reset --hard
+이건 working directory랑 staging area를 다 날려버리는 거야.
+진짜 신기하네 그냥 most recent commited data로 통일이 되어 버리는 것 같아.
+
+ - HEAD에 대한 정의
+아마도 most recent file인 것 같나?
+현재 branch(?)의 가장 최근 commit
+
+? git checkout master
+
+ - branch의 형태를 graph로 볼 수 있는 것. 
+git log --graph -- oneline
+
+ - git branch 그리고 git checkout의 번거로움을 해결하기 위해서
+git checkout -b "new-branch-name"
+이렇게 쓸 수 있다.
+
+ - 아 HEAD라는 것은
+현재 내가 있는 곳을 얘기하는 것. master 혹은 타 branch, 혹은 특정 위치. 
+
+ - git merge master coins
+coins into master!!!
+
+ - git show
+branch를 여러개 merge하면 log를 통해서 바로 이전 commit의 parent를 찾기 힘들 수 있다. 이 때, git show를 사용하면 비교 변수를 넣지 않고 바로 볼 수 있다.
+
+git branch -d 'deleting-label-name'
+ - merge 이후 label을 지울 때 사용한다.
+
+git merge --abort
+ - merge state를 취소하는 법.
+
