@@ -106,3 +106,24 @@ git branch -d 'deleting-label-name'
 git merge --abort
  - merge state를 취소하는 법.
 
+QQ git remote 가 뭐야
+ git remote add origin https://github.com/skdy33/git_study.git
+
+ - git push origin master
+
+ - forking
+forking은 타 github에서 나의 github으로 복사하는 것?
+
+ - 그니까 clone 을 통해서 github의 dataset을 내 컴퓨터로 받아올 때는 당연하게도 remote를 사용할거야. 그래서 그걸 확인하기 위해서는
+git remote -v
+
+ - git fetch
+그니까 github에 있는 updated codes를 origin/master 라는 tip으로 가져오는거 같아.
+
+ - fastforward merge
+check if merging b into a would be a fast-forward
+
+ - 첫 시작에서 
+git init
+git remote add origin 내홈피
+이건가봥
